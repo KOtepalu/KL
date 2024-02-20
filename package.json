@@ -4,7 +4,7 @@
   "description": "Kasutajaliideste disain ja arendus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
   },
   "keywords": [],
   "author": "",
