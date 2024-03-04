@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./public/*.{html,js}"],
   theme: {
-    extend: {},
+    fontSize: {
+      sm: '0.9375rem',
+      base: '1.1rem',
+      '5xl': ['4rem', 1.05],
+    },
+    extend: {
+      fontFamily: {
+        body:['Roboto'],
+        title:['Chonburi'],
+      }
+    },
   },
   plugins: [],
 }
