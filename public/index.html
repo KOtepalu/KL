@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="text-[#2d2d2d]">
     <header class="bg-white">
-        <nav class="sticky top-0 z-10 flex justify-between items-center h-24 my-auto mx-auto w-[1184px] text-sm font-body font-normal">
+        <nav class="flex justify-between items-center h-24 my-auto mx-auto w-[1184px] text-sm font-body font-normal">
             <div>
                 <img class="w-32" src="../testlio-logo.png" alt="testlio-logo">
             </div>
-            <div class="">
-                <ul class="flex items-center gap-[2vw]  text-[#2d2d2d] text-sm font-body font-normal">
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8  text-[#2d2d2d] text-sm font-body font-normal">
                     <li>
                         <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Solutions</a>
                     </li>
@@ -35,12 +37,19 @@
                     </li>
                 </ul>
             </div>
-        <div>
-            <button class="px-4 py-2 text-[#2d2d2d] text-sm rounded-full hover:bg-[#E7F4FF]">Sign in</button>
+        <div class="flex items-center gap-6">
+            <button class="px-4 py-2 text-[#2d2d2d] text-sm rounded-full hover:bg-[#E7F4FF] hidden md:block">Sign in</button>
             <button class="px-4 py-2 text-[#ffffff] bg-[#0090ff] text-sm rounded-full hover:bg-[#2667CC]">Request info</button>
+            <ion-icon onclick="onToggleMenu(this)" size="large" name="menu-outline" class="cursor-pointer md:hidden"></ion-icon>
         </div>
         </nav>
     </header>
+
+    <script>
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+        }
+    </script>
     <div class="bg-blue-50 flex grid-flow-col px-32">
         <div class="p-4 w-1/2">
             <h1 class="text-5xl font-title p-2 pt-4">Your trusted partner in critical testing moments</h1>
