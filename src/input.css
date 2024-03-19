@@ -6,3 +6,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .mask-linear-gradient {
+      mask-image: linear-gradient(to right, transparent 0, #C3E4FF 128px, #C3E4FF calc(100% - 200px), transparent 100%);
+    }
+  }
+  
