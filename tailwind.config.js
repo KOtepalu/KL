@@ -5,8 +5,11 @@ module.exports = {
     fontSize: {
       sm: '0.9375rem',
       base: '1.1rem',
+      'nupp': '0.9375rem',
       'xl': '1.4rem',
-      '5xl': ['4rem', 1.05],
+      '1xl': '1.5rem',
+      '5xl': ['4rem', 1.05], /*hero sektsiooni pealkiri, h1, 64px*/
+      '4xl': ['3rem', 1.05], /*h2 pealkirjad 48px*/
       '2xl': ['1.5rem', 1.05],
     },
     extend: {
