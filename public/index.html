@@ -10,35 +10,157 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="text-[#2d2d2d]">
-    <header class="bg-white">
+    <header class="bg-white hidden md:block fixed top-0 w-full z-50">
         <nav class="flex justify-between items-center h-24 my-auto mx-auto max-w-[1184px] md:w-auto text-sm font-body font-normal">
             <div>
                 <img class="w-32" src="../testlio-logo.png" alt="testlio-logo">
             </div>
             <div class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8  text-[#2d2d2d] text-sm font-body font-normal">
-                    <li class="relative group px-3 py-2">
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Solutions</a>
-                        <div class="flex h-full justify-start items-center absolute  top-0 left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 transform">
-                            <div class="left-0 relative flex justify-start top-16 p-6 bg-white shadow-xl w-screen">
-                                <p>Solutions</p>
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-1 gap-8  text-[#2d2d2d] text-sm font-body font-normal">
+                    <li id="dropdownButton2">
+                        <a onclick="toggleDropdown2()" class="px-4 py-2 rounded-full focus:bg-[#E7F4FF] hover:bg-[#E7F4FF]" href="#">Solutions<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
+                        <div id="dropdown2" class="hidden h-full justify-start items-center absolute transition group-hover:translate-y-5 translate-y-0 duration-500 ease-in-out group-hover:transform z-50 transform">
+                            <div class="flex-col gap-20 md:flex-row -left-48 relative flex top-8 p-10 bg-white shadow-xl w-[1184px] border-t border-solid border-gray-200">
+                                <div class="text-left md:w-1/5">
+                                    <h4 class="text-1xl font-medium font-body">Solutions</h4>
+                                    <p class="text-sm text-wrap my-5">Testlio maximizes software testing impact by offering comprehensive solutions for your toughest quality challenges.</p>
+                                    <button class="text-sm font-bold text-[#0090ff] hover:underline">Read more →</button>
+                                </div>
+                                <div class="text-left md:w-2/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Fused</p>
+                                        <p class="text-pisike text-wrap">Integrate automated and manual testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Services</p>
+                                        <p class="text-pisike text-wrap">Partner with experts for breakthrough results</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Methodologies</p>
+                                        <p class="text-pisike text-wrap">Transform quality reliability, impact, and value</p>
+                                    </div>
+                                </div>
+                                <div class="text-left md:w-2/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Offerings</p>
+                                        <p class="text-pisike text-wrap">Experience holistic software testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Coverage</p>
+                                        <p class="text-pisike text-wrap">Devices, languages, locations, payments and more</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Network</p>
+                                        <p class="text-pisike text-wrap">Access top-quality testing talent</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>         
                     </li>
-                    <li>
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Industries</a>
+                    <li id="dropdownButton3">
+                        <a onclick="toggleDropdown3()" class="px-4 py-2 rounded-full hover:bg-[#E7F4FF] focus:bg-[#E7F4FF]" href="#">Industries<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
+                        <div id="dropdown3" class="hidden h-full justify-start items-center absolute transition group-hover:translate-y-5 translate-y-0 duration-500 ease-in-out group-hover:transform z-50 transform">
+                            <div class="flex-col gap-20 md:flex-row -left-80 relative flex top-8 p-10 bg-white shadow-xl w-[1184px] border-t border-solid border-gray-200">
+                                <div class="text-left md:w-1/5">
+                                    <h4 class="text-1xl font-medium font-body">Industries</h4>
+                                    <p class="text-sm text-wrap my-5">Testlio empowers diverse industries by providing tailored testing strategies to overcome unique challenges and drive success.</p>
+                                </div>
+                                <div class="text-left md:w-1/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Commerce & Retail</p>
+                                        <p class="text-pisike text-wrap">Refine shopping with expert testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Health & Wellness</p>
+                                        <p class="text-pisike text-wrap">Boost well-being with meticulous testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Learning & Education</p>
+                                        <p class="text-pisike text-wrap">Boost education with optimized experiences</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Software & Services</p>
+                                        <p class="text-pisike text-wrap">Achieve excellence using trusted testing solutions</p>
+                                    </div>
+                                </div>
+                                <div class="text-left md:w-1/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Offerings</p>
+                                        <p class="text-pisike text-wrap">Experience holistic software testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Coverage</p>
+                                        <p class="text-pisike text-wrap">Devices, languages, locations, payments and more</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Network</p>
+                                        <p class="text-pisike text-wrap">Access top-quality testing talent</p>
+                                    </div>
+                                </div>
+                                <div class="text-left md:w-2/5 bg-[#FDEEE1] rounded-xl p-5">
+                                    <h4 class="text-1xl font-medium font-body">Solutions</h4>
+                                    <p class="text-sm text-wrap my-5">Testlio maximizes software testing impact by offering comprehensive solutions for your toughest quality challenges.</p>
+                                    <button class="text-sm font-bold text-[#2d2d2d] hover:underline">Read more →</button>
+                                </div>
+                            </div>
+                        </div>         
+                    </li>
+                    <li id="dropdownButton1">
+                        <a onclick="toggleDropdown1()" class="px-4 py-2 rounded-full focus:bg-[#E7F4FF] hover:bg-[#E7F4FF]" href="#">Platform<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
+                        <div id="dropdown1" class="hidden h-full justify-start items-center absolute transition group-hover:translate-y-5 translate-y-0 duration-500 ease-in-out group-hover:transform z-50 transform">
+                            <div class="flex-col gap-20 md:flex-row -left-96 relative flex top-8 p-10 bg-white shadow-xl w-[1184px] border-t border-solid border-gray-200">
+                                <div class="text-left md:w-1/5">
+                                    <h4 class="text-1xl font-medium font-body">Industries</h4>
+                                    <p class="text-sm text-wrap my-5">Testlio empowers diverse industries by providing tailored testing strategies to overcome unique challenges and drive success.</p>
+                                </div>
+                                <div class="text-left md:w-1/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Commerce & Retail</p>
+                                        <p class="text-pisike text-wrap">Refine shopping with expert testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Health & Wellness</p>
+                                        <p class="text-pisike text-wrap">Boost well-being with meticulous testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Learning & Education</p>
+                                        <p class="text-pisike text-wrap">Boost education with optimized experiences</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Software & Services</p>
+                                        <p class="text-pisike text-wrap">Achieve excellence using trusted testing solutions</p>
+                                    </div>
+                                </div>
+                                <div class="text-left md:w-1/5 flex flex-col space-y-3">
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Offerings</p>
+                                        <p class="text-pisike text-wrap">Experience holistic software testing</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Coverage</p>
+                                        <p class="text-pisike text-wrap">Devices, languages, locations, payments and more</p>
+                                    </div>
+                                    <div class="p-2 hover:bg-[#E7F4FF] rounded-md">
+                                        <p class="text-sm text-wrap font-bold">Network</p>
+                                        <p class="text-pisike text-wrap">Access top-quality testing talent</p>
+                                    </div>
+                                </div>
+                                <div class="text-left md:w-2/5 bg-[#FDEEE1] rounded-xl p-5">
+                                    <h4 class="text-1xl font-medium font-body">Solutions</h4>
+                                    <p class="text-sm text-wrap my-5">Testlio maximizes software testing impact by offering comprehensive solutions for your toughest quality challenges.</p>
+                                    <button class="text-sm font-bold text-[#2d2d2d] hover:underline">Read more →</button>
+                                </div>
+                            </div>
+                        </div> 
                     </li>
                     <li>
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Platform</a>
+                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF] focus:bg-[#E7F4FF]" href="#">Insights<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
                     </li>
                     <li>
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Insights</a>
+                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF] focus:bg-[#E7F4FF]" href="#">About<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
                     </li>
                     <li>
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">About</a>
-                    </li>
-                    <li>
-                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF]" href="#">Work</a>
+                        <a class="px-4 py-2 rounded-full hover:bg-[#E7F4FF] focus:bg-[#E7F4FF]" href="#">Work<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-sm font-body font-normal px-2 cursor-pointer "></ion-icon></a>
                     </li>
                 </ul>
             </div>
@@ -50,17 +172,138 @@
         </nav>
     </header>
 
+    <header class="md:hidden bg-white">
+        <nav class="flex h-24 justify-between items-center w-[92%] mx-auto">
+            <div>
+                <img class="w-28 cursor-pointer" src="../testlio-logo.png" alt="testlio-logo">
+            </div>
+            <div class="nav-links z-50 duration-500 mt-0 pt-10 md:static absolute h-screen bg-white left-0 top-[-100%] md:w-auto w-full flex px-5">
+                <ul id="dropdownButton" class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 w-[400px]">
+                    <li onclick="toggleDropdown()" class="flex justify-between py-1 text-xl font-bold">Solutions<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <div id="dropdown" class="hidden">
+                        <div class="flex flex-col items-start justify-start gap-2">
+                            <p>Testlio maximizes software testing impact by offering comprehensive solutions for your toughest quality challenges.</p>
+                            <button class="py-5 text-sm font-bold text-[#0090ff] hover:underline">Read more →</button>
+                            <p class="text-base text-wrap font-bold">Fused</p>
+                            <p class="text-sm text-wrap">Integrate automated and manual testing</p>
+                            <p class="pt-5 text-base text-wrap font-bold">Services</p>
+                            <p class="text-sm text-wrap">Partner with experts for breakthrough results</p>
+                            <p class="pt-5 text-base text-wrap font-bold">Methodologies</p>
+                            <p class="text-sm text-wrap">Transform quality reliability, impact, and value</p>
+                            <p class="pt-5 text-base text-wrap font-bold">Offerings</p>
+                            <p class="text-sm text-wrap">Experience holistic software testing</p>
+                            <p class="pt-5 text-base text-wrap font-bold">Coverage</p>
+                            <p class="text-sm text-wrap">Devices, languages, locations, payments and more</p>
+                            <p class="pt-5 text-base text-wrap font-bold">Network</p>
+                            <p class="text-sm text-wrap">Access top-quality testing talent</p>
+                        </div>
+                    </div>
+                    <li class="flex justify-between py-1 text-xl font-bold">Industries<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <li class="flex justify-between py-1 text-xl font-bold">Platform<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <li class="flex justify-between py-1 text-xl font-bold">Insights<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <li class="flex justify-between py-1 text-xl font-bold">About<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <li class="flex justify-between py-1 text-xl font-bold">Work<ion-icon onclick="onToggleChevron(this)" name="chevron-down" class="text-3xl cursor-pointer md:hidden"></ion-icon></li>
+                    <li>
+                        <button class="block w-full px-4 py-2 text-[#2d2d2d] text-sm rounded-full hover:bg-[#E7F4FF]">Sign in</button>
+                    </li>
+                    <li>
+                        <button class="block w-full px-4 py-2 text-[#ffffff] bg-[#0090ff] text-sm rounded-full hover:bg-[#2667CC]">Request info</button>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                function toggleDropdown() {
+                    let dropdown = document.querySelector('#dropdownButton #dropdown');
+                    dropdown.classList.toggle("hidden");
+                }
+            </script>
+
+<script>
+    // Function to toggle Dropdown 2 visibility
+    function toggleDropdown2() {
+        let dropdown2 = document.querySelector('#dropdown2');
+        dropdown2.classList.toggle("hidden");
+    }
+
+    // Event listener to close Dropdown 2 when clicked outside
+    document.addEventListener('click', function(event) {
+        let dropdown2 = document.querySelector('#dropdown2');
+        let dropdownToggle = document.querySelector('#dropdownButton2');
+
+        // Check if the click target is outside Dropdown 2 and its toggle button
+        if (!dropdown2.contains(event.target) && !dropdownToggle.contains(event.target)) {
+            dropdown2.classList.add("hidden"); // Hide Dropdown 2
+        }
+    });
+</script>
+
+
+<script>
+    // Function to toggle Dropdown 3 visibility
+    function toggleDropdown3() {
+        let dropdown3 = document.querySelector('#dropdown3');
+        dropdown3.classList.toggle("hidden");
+    }
+
+    // Event listener to close Dropdown 3 when clicked outside
+    document.addEventListener('click', function(event) {
+        let dropdown3 = document.querySelector('#dropdown3');
+        let dropdownToggle = document.querySelector('#dropdownButton3');
+
+        // Check if the click target is outside Dropdown 3 and its toggle button
+        if (!dropdown3.contains(event.target) && !dropdownToggle.contains(event.target)) {
+            dropdown3.classList.add("hidden"); // Hide Dropdown 3
+        }
+    });
+</script>
+
+            <script>
+            // Function to toggle Dropdown 1 visibility
+            function toggleDropdown1() {
+                let dropdown1 = document.querySelector('#dropdown1');
+                dropdown1.classList.toggle("hidden");
+            }
+
+            // Event listener to close Dropdown 1 when clicked outside
+            document.addEventListener('click', function(event) {
+                let dropdown1 = document.querySelector('#dropdown1');
+                let dropdownToggle = document.querySelector('#dropdownButton1');
+
+                // Check if the click target is outside Dropdown 1 and its toggle button
+                if (!dropdown1.contains(event.target) && !dropdownToggle.contains(event.target)) {
+                    dropdown1.classList.add("hidden"); // Hide Dropdown 1
+                }
+            });
+            </script>
+
+            <div class="flex items-center gap-6">
+                <button class="px-4 py-2 text-[#ffffff] bg-[#0090ff] text-sm rounded-full hover:bg-[#2667CC]">Request info</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    
+    
+
     <script>
-        function onToggleMenu(e) {
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <script>
+        function onToggleChevron(e){
+            e.name = e.name === 'chevron-up' ? 'chevron-down' : 'chevron-up'
         }
     </script>
     <!--SECTION 1 HERO-->
 
-    <div class="bg-[#e6f4ff] flex grid-flow-col h-full w-screen justify-center items-center">
+    <div class="bg-[#e6f4ff] flex grid-flow-col h-full w-screen justify-center items-center md:mt-24">
         <div class="flex max-w-[1184px] md:w-auto">
         <div class=" w-1/2 pt-16">
-            <h1 class="text-3xl md:text-5xl font-title p-2 pt-4">Your trusted partner in critical testing moments</h1>
+            <h1 class="text-mobiilsuur md:text-5xl font-title p-2 pt-4">Your trusted partner in critical testing moments</h1>
             <p class="text-base font-body text-[#2d2d2d] p-2 pt-4">Tackle the most demanding software testing challenges with Testlio. No matter the stakes or scale, our solutions combine humans and AI-powered machines to ensure optimal quality in any location, on any device, in any language, or through any payment system.</p>
             <div class="pt-8">
                 <button class="bg-[#0090ff] py-[10px] px-[20px] p-2 rounded-full border-2 border-[#0090ff] hover:bg-[#2667CC] hover:border-[#2667CC] text-white">Talk to an expert</button>            
@@ -149,10 +392,10 @@
         </div>
     </div>
     <!--SECTION 3-->
-    <section class="w-screen justify-center items-center flex py-8 md:py-24">
-        <div class="max-w-[1184px]">
+    <section class="w-screen justify-center items-center flex py-16 md:py-24">
+        <div class="w-[92%] md:max-w-[1184px]">
             <div class="flex flex-col items-center justify-center">
-                <h2 class="font-title text-center text-[36px] md:text-[48px]">Complete QA, QE, and DX solutions</h2>
+                <h2 class="font-title text-center text-mobiilsuur md:text-4xl">Complete QA, QE, and DX solutions</h2>
                 <p class="text-center text-base md:text-xl mt-4 md:mt-[24px] mb-8 md:mb-[96px] w-9/12">Across your software testing needs, we can help. Testlio provides quality assurance, quality engineering, and digital experience solutions to help you move fast and ensure exceptional digital products—all at compelling economic value.</p>
             </div>
             <div class="flex flex-col md:flex-row mt-4 md:mt-0 wrap gap-20">
@@ -184,7 +427,7 @@
             <div class="py-[60px] bg-[#E7F4FF] flex justify-center items-center">
                 <div class=" w-1/2">
                     <p class="text-[16px]">FIRESIDE CHAT</p>
-                    <h2 class="text-[40px] mt-[16px] flex text-wrap font-bold">Roku’s Strategy for Localization Testing and QA—at Scale</h2>
+                    <h2 class="mt-[16px] font-title text-mobiilsuur md:text-4xl flex text-wrap font-bold">Roku’s Strategy for Localization Testing and QA—at Scale</h2>
                     <div class="mt-[24px]"><button class="bg-[#E7F4FF] py-[13px] px-[30px] rounded-full border-black border-2 hover:bg-black hover:text-[#E7F4FF]">Watch on demand</button></div>
                 </div>
                 <div class="w-1/2">
@@ -196,9 +439,9 @@
     
     
      <!--SECTION 5-->
-     <div class="w-screen justify-center items-center flex pt-8 pb-8 md:pt-32 md:pb-32">
-        <div class="max-w-[1044px] px-4 md:px-0">
-            <h2 class="font-title text-center text-[36px] md:text-[48px] mx-4 md:mx-36">It's time to test differently</h2>
+     <div class="w-screen justify-center items-center flex pt-16 pb-16 md:pt-32 md:pb-32">
+        <div class="w-[92%] md:max-w-[1044px] px-4 md:px-0">
+            <h2 class="font-title text-center text-mobiilsuur md:text-4xl mx-1 md:mx-36">It's time to test differently</h2>
             <p class="text-base md:text-xl text-center font-body text-[#2d2d2d] px-4 md:px-0 pt-4">Testlio uniquely blends a software platform, freelance tester network, and expert client services to deliver comprehensive software testing solutions.</p>
             <div class="mt-8 grid md:grid-cols-3 grid-cols-1 gap-10 items-center">
                 <div class="items-center justify-center text-center">
@@ -224,23 +467,23 @@
     </div>
     
     <!--SECTION 6-->
-    <div class="w-screen justify-center items-center flex pt-64 pb-64" style="background-image: url('../raods-rivers-test-3.jpg');width:100%; background-size: cover;">
-        <div class="w-[1184px] flex flex-col justify-start items-start space-y-7">
+    <div class="w-screen justify-center items-center flex py-32 md:pt-64 md:pb-64" style="background-image: url('../raods-rivers-test-3.jpg');width:100%; background-size: cover;">
+        <div class="w-[90%] md:w-[1184px] flex flex-col justify-start items-start space-y-7">
             <p class="font-body text-sm font-black text-white">NEW EBOOK</p>
-            <h2 class="font-title text-4xl text-white">Value-based QA Staffing <br> for Mobile App Testing</h2>
+            <h2 class="font-title text-mobiilsuur md:text-4xl text-white">Value-based QA Staffing <br> for Mobile App Testing</h2>
             <div class="mt-8"><button class="bg-white text-nupp font-body text-black py-[13px] px-[30px] rounded-full border-white border-2 hover:bg-[#E6E6E6] hover:text-black hover:border-[#E6E6E6]">Download ebook</button></div>
         </div>        
     </div>
     <!--SECTION 6-->
-    <div class="w-screen justify-center items-center flex pt-32 pb-32 bg-[#E7F4FF]">
-        <div class="max-w-[1044px] bg-[#9D61ED] pt-9 pb-16 pr-24 pl-24 rounded-2xl">
-            <div class="mt-8 grid grid-cols-2 gap-1 items-center">
-                <div class="space-y-7">
-                    <p class="font-body text-sm font-bold text-white">FUSED SOFTWARE TESTING</p>
-                    <h2 class="font-title text-4xl text-white">Elevate quality with confidence</h2>
-                    <div class="mt-8"><button class="bg-[#9D61ED] text-nupp font-body text-white py-[13px] px-[30px] rounded-full border-white border-2 hover:bg-white hover:text-[#9D61ED] hover:border-white">Our approach</button></div>
+    <div class="w-screen justify-center items-center flex py-16 md:py-32 bg-[#E7F4FF]">
+        <div class="w-[90%] md:max-w-[1044px] bg-[#9D61ED] pt-5 md:pt-9 pb-2 md:pb-16 px-10 md:px-20 rounded-2xl">
+            <div class="mt-1 md:mt-8 grid grid-cols-1 md:grid-cols-2 gap-1 items-center">
+                <div class="space-y-7 md:space-y-7">
+                    <p class="text-center md:text-left font-body text-sm font-bold text-white">FUSED SOFTWARE TESTING</p>
+                    <h2 class="text-center md:text-left font-title text-mobiilsuur md:text-4xl text-white">Elevate quality with confidence</h2>
+                    <div class="mt-8 items-center justify-center md:items-start md:justify-start md:text-left text-center"><button class="bg-[#9D61ED] text-nupp font-body text-white py-[13px] px-[30px] rounded-full border-white border-2 hover:bg-white hover:text-[#9D61ED] hover:border-white">Our approach</button></div>
                 </div>
-                <div class="[&_img]:max-w-96 flex justify-end items-end">
+                <div class="[&_img]:max-w-72 md:[&_img]:max-w-96 flex justify-center items-center md:justify-end md:items-end">
                     <img src="../illustration-3-600x600.png" alt="Illustration">
                 </div>
             </div>
