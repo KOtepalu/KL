@@ -299,22 +299,24 @@
         }
     </script>
     <!--SECTION 1 HERO-->
-
     <div class="bg-[#e6f4ff] flex grid-flow-col h-full w-screen justify-center items-center md:mt-24">
-        <div class="flex max-w-[1184px] md:w-auto">
-        <div class=" w-1/2 pt-16">
-            <h1 class="text-mobiilsuur md:text-5xl font-title p-2 pt-4">Your trusted partner in critical testing moments</h1>
-            <p class="text-base font-body text-[#2d2d2d] p-2 pt-4">Tackle the most demanding software testing challenges with Testlio. No matter the stakes or scale, our solutions combine humans and AI-powered machines to ensure optimal quality in any location, on any device, in any language, or through any payment system.</p>
-            <div class="pt-8">
-                <button class="bg-[#0090ff] py-[10px] px-[20px] p-2 rounded-full border-2 border-[#0090ff] hover:bg-[#2667CC] hover:border-[#2667CC] text-white">Talk to an expert</button>            
-                <button class="bg-blue-50 py-[10px] px-[20px] p-2 ml-2 rounded-full border-black border-2 hover:bg-black hover:text-white">Apply to freelance</button>
-                <img src="../img-ratings.png" alt="Ratings" class="w-1/2 pt-6">
+        <div class="flex max-w-[1184px] md:w-auto flex-col md:flex-row justify-center md:justify-start">
+            <div class="w-[92%] md:w-1/2 pt-8 md:pt-16 text-center md:text-left">
+                <!-- Content including buttons -->
+                <h1 class="text-3xl md:text-5xl font-title p-2 pt-4">Your trusted partner in critical testing moments</h1>
+                <p class="text-base font-body text-[#2d2d2d] p-2 pt-4">Tackle the most demanding software testing challenges with Testlio. No matter the stakes or scale, our solutions combine humans and AI-powered machines to ensure optimal quality in any location, on any device, in any language, or through any payment system.</p>
+                <div class="pt-8 flex flex-row md:items-center gap-4 md:gap-2 justify-center md:justify-start">
+                    <button class="bg-[#0090ff] py-2 px-4 md:py-[10px] md:px-[20px] rounded-full border-2 border-[#0090ff] hover:bg-[#2667CC] hover:border-[#2667CC] text-white">Talk to an expert</button>            
+                    <button class="bg-blue-50 py-2 px-4 md:py-[10px] md:px-[20px] rounded-full border-black border-2 hover:bg-black hover:text-white">Apply to freelance</button>
+                </div>
+                <div class="flex items-center justify-center md:justify-start md:items-start">
+                    <img src="../img-ratings.png" alt="Ratings" class="w-2/3 md:w-1/2 py-6">
+                </div>
+            </div>
+            <div class="w-[92%] md:w-1/2 bg-[url('../about-hero-line.svg')] bg-contain bg-no-repeat pt-16 md:pt-0 flex justify-center items-end">
+                <img src="img1.png" alt="Founders" class="w-full">
             </div>
         </div>
-        <div class="w-1/2 bg-[url('../about-hero-line.svg')] bg-contain bg-no-repeat pt-16">
-            <img src="img1.png" alt="Founders">
-        </div>
-    </div>
     </div>
     <!--SECTION 2 LOGO SLIDER-->
     <div class="w-screen flex justify-center items-center bg-[#C3E4FF] h-48">
@@ -422,15 +424,15 @@
     </section>
     
     <!--SECTION 4-->
-    <section class="w-screen justify-center items-center flex py-24 bg-[#E7F4FF]">
-        <div class=" max-w-[1044px]">
-            <div class="py-[60px] bg-[#E7F4FF] flex justify-center items-center">
-                <div class=" w-1/2">
+    <section class="w-screen justify-center items-center flex py-12 bg-[#E7F4FF]">
+        <div class="max-w-[1044px] w-[92%]">
+            <div class=" bg-[#E7F4FF] flex md:flex-row flex-col justify-center items-center gap-8">
+                <div class="md:w-1/2 w-[92%]">
                     <p class="text-[16px]">FIRESIDE CHAT</p>
                     <h2 class="mt-[16px] font-title text-mobiilsuur md:text-4xl flex text-wrap font-bold">Roku’s Strategy for Localization Testing and QA—at Scale</h2>
                     <div class="mt-[24px]"><button class="bg-[#E7F4FF] py-[13px] px-[30px] rounded-full border-black border-2 hover:bg-black hover:text-[#E7F4FF]">Watch on demand</button></div>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2 w-[92%]">
                     <img src="../homepageroku-webinar.png" alt="figures">
                 </div>
             </div>
@@ -491,12 +493,12 @@
         </div>
     </div>
     <!--FOOTER-->
-    <footer class="bg-white pt-20 pb-24 ">
-        <div class="container mx-auto flex flex-wrap justify-center w-[92%] md:w-[1184px]">
+    <footer class="bg-white pt-20 pb-24">
+        <div class="container mx-auto flex flex-wrap justify-center text-center md:text-left w-[92%] md:w-[1184px]">
             <!-- Column 1 -->
             <div class="w-full md:w-1/5 text-sm flex flex-col">
                 <img class="w-28 mb-4" src="../testlio-logo.png" alt="testlio-logo">
-                <ul class="list-none mt-4">
+                <ul class="list-none mt-4 justify-center">
                     <li class="flex items-center hover:underline py-1"><img class="w-5 mr-2" src="../facebook-svg.png" alt=" ">Facebook</li>
                     <li class="flex items-center hover:underline py-1"><img class="w-5 mr-2" src="../twitter-icon.webp" alt=" ">Twitter</li>
                     <li class="flex items-center hover:underline py-1"><img class="w-5 mr-2" src="../linkedin.svg" alt=" ">LinkedIn</li>
